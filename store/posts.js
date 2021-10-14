@@ -1,8 +1,9 @@
 export const state = () => ({})
 
 export const actions = {
-  async getPosts() {
-    return await this.$repositories.posts.get()
+  async createPost(context, payload) {
+    return await this.$repositories.posts.create(payload)
+    // return await this.$axios.$posts('posts', {})
   },
 }
 

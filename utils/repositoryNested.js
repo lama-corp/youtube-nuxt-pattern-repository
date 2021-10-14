@@ -1,4 +1,4 @@
-// /users/:userId/posts, { userId: 1 } => /users/1/posts
+// /users/:userId/posts/:postId/like, { userId: 1, postId: 12 } => /users/1/posts/12/like
 const mapPathIds = (path, nestedIds) => {
   Object.keys(nestedIds).forEach(function (idName) {
     path = path.replace(`:${idName}`, nestedIds[idName])
